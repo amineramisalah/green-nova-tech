@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import About from './About';
+import Training from './Training';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <h1>🌿 Green Nova Tech</h1>
         <p>نحو مستقبل ذكي ومستدام</p>
         <a href="#about" className="btn">من نحن</a>
+        <a href="#training" className="btn">التكوين</a>
       </header>
 
       <section className="services">
@@ -24,6 +26,10 @@ function App() {
         <About />
       </div>
 
+      <div id="training">
+        <Training />
+      </div>
+
       <footer className="footer">
         <p>📞 اتصل بنا: greennovatech0@gmail.com</p>
       </footer>
@@ -32,5 +38,6 @@ function App() {
 }
 
 export default App;
+
 
 
