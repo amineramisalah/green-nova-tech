@@ -1,11 +1,27 @@
 import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
-      <h1>🌿 Green Nova Tech</h1>
-      <h2>حلول ذكية في الطاقات المتجددة والذكاء الاصطناعي</h2>
-      <p>نطوّر تقنيات محلية مستدامة لأجل مستقبل أكثر ذكاء وخضرة.</p>
+    <div className="container">
+      <header className="header">
+        <h1>🌿 Green Nova Tech</h1>
+        <p>نحو مستقبل ذكي ومستدام</p>
+        <a href="#contact" className="btn">ابدأ الآن</a>
+      </header>
+
+      <section className="services">
+        <h2>خدماتنا</h2>
+        <ul>
+          <li>☀️ حلول الطاقة الشمسية الذكية</li>
+          <li>🤖 تطبيقات الذكاء الاصطناعي في الزراعة</li>
+          <li>💡 منصات التحكم والمراقبة عن بعد</li>
+        </ul>
+      </section>
+
+      <footer id="contact" className="footer">
+        <p>📞 اتصل بنا: greennovatech0@gmail.com</p>
+      </footer>
     </div>
   );
 }
