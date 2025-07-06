@@ -1,75 +1,62 @@
 import React from 'react';
 import './App.css';
+
+import Services from './Services';
 import Training from './Training';
 import Products from './Products';
-import ServiceRequest from './ServiceRequest';
+import Request from './Request';
+import Contact from './Contact';
 
 function App() {
   return (
     <div className="App">
-      {/* رأس الصفحة */}
-      <header className="header">
-        <h1>🌿 Green Nova Tech</h1>
-        <p>نحو مستقبل ذكي ومستدام</p>
-        <div className="nav-buttons">
-          <a href="#about" className="btn">من نحن</a>
-          <a href="#services" className="btn">خدماتنا</a>
-          <a href="#training" className="btn">التكوين</a>
-          <a href="#products" className="btn">منتجاتنا</a>
-          <a href="#request" className="btn">طلب خدمة</a>
-        </div>
+      <header className="app-header">
+        <h1>🌱 GreenNovaTech</h1>
+        <nav className="nav-links">
+          <a href="#about">من نحن</a>
+          <a href="#services">خدماتنا</a>
+          <a href="#training">التكوين</a>
+          <a href="#products">المنتجات</a>
+          <a href="#request">طلب الخدمة</a>
+          <a href="#contact">اتصل بنا</a>
+        </nav>
       </header>
 
-      {/* قسم من نحن */}
-      <div id="about">
-        <section className="about">
-          <h2>من نحن</h2>
-          <p>
-            نحن مؤسسة جزائرية ناشئة تُعنى بابتكار حلول ذكية في مجالات الطاقات المتجددة
-            والذكاء الاصطناعي، ونسعى لخلق بيئة تكنولوجية مستدامة تعزز الاقتصاد المحلي.
-          </p>
-        </section>
-      </div>
+      <section id="about" className="section">
+        <h2>من نحن</h2>
+        <p>
+          GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية ومبتكرة
+          في مجالات الطاقات المتجددة والذكاء الاصطناعي. نعمل على تطوير تقنيات محلية
+          لتحقيق الاستقلال الطاقوي وتعزيز الابتكار.
+        </p>
+      </section>
 
-      {/* قسم خدماتنا */}
-      <div id="services">
-        <section className="services">
-          <h2>خدماتنا</h2>
-          <ul>
-            <li>🔋 حلول الطاقات المتجددة (شمسية، ريحية، هجينة...)</li>
-            <li>🤖 تطبيقات الذكاء الاصطناعي في الطاقات المتجددة</li>
-            <li>📊 الاستشارات الطاقوية ودراسات الجدوى</li>
-            <li>📚 تقديم دورات تدريبية في مجالات متعددة</li>
-            <li>🛠️ توفير منتجات وأجهزة متخصصة</li>
-          </ul>
-        </section>
-      </div>
+      <section id="services" className="section">
+        <Services />
+      </section>
 
-      {/* قسم التكوين */}
-      <div id="training">
+      <section id="training" className="section">
         <Training />
-      </div>
+      </section>
 
-      {/* قسم المنتجات */}
-      <div id="products">
+      <section id="products" className="section">
         <Products />
-      </div>
+      </section>
 
-      {/* قسم طلب خدمة */}
-      <div id="request">
-        <ServiceRequest />
-      </div>
+      <section id="request" className="section">
+        <Request />
+      </section>
 
-      {/* التذييل */}
+      <section id="contact" className="section">
+        <Contact />
+      </section>
+
       <footer className="footer">
-        <p>© 2025 Green Nova Tech - جميع الحقوق محفوظة</p>
+        <p>© 2025 GreenNovaTech - جميع الحقوق محفوظة</p>
       </footer>
     </div>
   );
 }
 
 export default App;
-
-
-
 
