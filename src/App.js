@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import Services from './Services';
+import Services from './Services'; // ✅ تأكد من وجود الملف بنفس الاسم
 import Training from './Training';
 import Products from './Products';
-import Request from './Request';
+import ServiceRequest from './ServiceRequest'; // ✅ الاسم الصحيح
 import Contact from './Contact';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <a href="#about">من نحن</a>
           <a href="#services">خدماتنا</a>
           <a href="#training">التكوين</a>
-          <a href="#products">المنتجات</a>
+          <a href="#products">منتجاتنا</a>
           <a href="#request">طلب الخدمة</a>
           <a href="#contact">اتصل بنا</a>
         </nav>
@@ -25,9 +25,9 @@ function App() {
       <section id="about" className="section">
         <h2>من نحن</h2>
         <p>
-          GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية ومبتكرة
-          في مجالات الطاقات المتجددة والذكاء الاصطناعي. نعمل على تطوير تقنيات محلية
-          لتحقيق الاستقلال الطاقوي وتعزيز الابتكار.
+          GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية في مجالات الطاقات المتجددة
+          والذكاء الاصطناعي. نعمل على دعم الابتكار، وتطوير تقنيات محلية، وتوفير تكوينات ومنتجات مبتكرة
+          لصالح الأفراد والمؤسسات.
         </p>
       </section>
 
@@ -44,7 +44,7 @@ function App() {
       </section>
 
       <section id="request" className="section">
-        <Request />
+        <ServiceRequest />
       </section>
 
       <section id="contact" className="section">
@@ -59,6 +59,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
