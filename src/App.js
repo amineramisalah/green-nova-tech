@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Training from './Training';
 import Products from './Products';
+import ServiceRequest from './ServiceRequest';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <a href="#services" className="btn">خدماتنا</a>
           <a href="#training" className="btn">التكوين</a>
           <a href="#products" className="btn">منتجاتنا</a>
+          <a href="#request" className="btn">طلب خدمة</a>
         </div>
       </header>
 
@@ -51,6 +53,11 @@ function App() {
       {/* قسم المنتجات */}
       <div id="products">
         <Products />
+      </div>
+
+      {/* قسم طلب خدمة */}
+      <div id="request">
+        <ServiceRequest />
       </div>
 
       {/* التذييل */}
