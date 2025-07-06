@@ -10,10 +10,11 @@ function App() {
   <h1>🌿 Green Nova Tech</h1>
   <p>نحو مستقبل ذكي ومستدام</p>
   <div className="nav-buttons">
-    <a href="#services" className="btn">خدماتنا</a>
-    <a href="#training" className="btn">التكوين</a>
-  </div>
-</header>
+  <a href="#about" className="btn">من نحن</a>
+  <a href="#services" className="btn">خدماتنا</a>
+  <a href="#training" className="btn">التكوين</a>
+</div>
+
 
 
       <div id="services">
