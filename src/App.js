@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
+import Home from './Home';
 import Services from './Services';
 import Training from './Training';
 import Products from './Products';
@@ -15,6 +16,7 @@ function App() {
         <header className="app-header">
           <h1>🌱 GreenNovaTech</h1>
           <nav className="nav-links">
+            <Link to="/">الرئيسية</Link>
             <Link to="/about">من نحن</Link>
             <Link to="/services">خدماتنا</Link>
             <Link to="/training">التكوين</Link>
@@ -25,15 +27,19 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/about" element={
-            <section className="section">
-              <h2>من نحن</h2>
-              <p>
-                GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية في مجالات الطاقات المتجددة
-                والذكاء الاصطناعي...
-              </p>
-            </section>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/about"
+            element={
+              <section className="section">
+                <h2>من نحن</h2>
+                <p>
+                  GreenNovaTech هي مؤسسة جزائرية ناشئة تقدّم حلولًا ذكية في مجالات الطاقات المتجددة والذكاء الاصطناعي، 
+                  بهدف دعم التحوّل الطاقوي وتعزيز الاستدامة.
+                </p>
+              </section>
+            }
+          />
           <Route path="/services" element={<Services />} />
           <Route path="/training" element={<Training />} />
           <Route path="/products" element={<Products />} />
@@ -50,6 +56,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
