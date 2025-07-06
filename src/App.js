@@ -1,64 +1,56 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 
-import Services from './Services'; // ✅ تأكد من وجود الملف بنفس الاسم
+import Services from './Services';
 import Training from './Training';
 import Products from './Products';
-import ServiceRequest from './ServiceRequest'; // ✅ الاسم الصحيح
+import ServiceRequest from './ServiceRequest';
 import Contact from './Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="app-header">
-        <h1>🌱 GreenNovaTech</h1>
-        <nav className="nav-links">
-          <a href="#about">من نحن</a>
-          <a href="#services">خدماتنا</a>
-          <a href="#training">التكوين</a>
-          <a href="#products">منتجاتنا</a>
-          <a href="#request">طلب الخدمة</a>
-          <a href="#contact">اتصل بنا</a>
-        </nav>
-      </header>
+    <Router>
+      <div className="App">
+        <header className="app-header">
+          <h1>🌱 GreenNovaTech</h1>
+          <nav className="nav-links">
+            <Link to="/about">من نحن</Link>
+            <Link to="/services">خدماتنا</Link>
+            <Link to="/training">التكوين</Link>
+            <Link to="/products">منتجاتنا</Link>
+            <Link to="/request">طلب الخدمة</Link>
+            <Link to="/contact">اتصل بنا</Link>
+          </nav>
+        </header>
 
-      <section id="about" className="section">
-        <h2>من نحن</h2>
-        <p>
-          GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية في مجالات الطاقات المتجددة
-          والذكاء الاصطناعي. نعمل على دعم الابتكار، وتطوير تقنيات محلية، وتوفير تكوينات ومنتجات مبتكرة
-          لصالح الأفراد والمؤسسات.
-        </p>
-      </section>
+        <Routes>
+          <Route path="/about" element={
+            <section className="section">
+              <h2>من نحن</h2>
+              <p>
+                GreenNovaTech هي مؤسسة جزائرية ناشئة متخصصة في تقديم حلول ذكية في مجالات الطاقات المتجددة
+                والذكاء الاصطناعي...
+              </p>
+            </section>
+          } />
+          <Route path="/services" element={<Services />} />
+          <Route path="/training" element={<Training />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/request" element={<ServiceRequest />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-      <section id="services" className="section">
-        <Services />
-      </section>
-
-      <section id="training" className="section">
-        <Training />
-      </section>
-
-      <section id="products" className="section">
-        <Products />
-      </section>
-
-      <section id="request" className="section">
-        <ServiceRequest />
-      </section>
-
-      <section id="contact" className="section">
-        <Contact />
-      </section>
-
-      <footer className="footer">
-        <p>© 2025 GreenNovaTech - جميع الحقوق محفوظة</p>
-      </footer>
-    </div>
+        <footer className="footer">
+          <p>© 2025 GreenNovaTech - جميع الحقوق محفوظة</p>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
 
 
 
