@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 import Training from './Training';
+import Products from './Products';
 
 function App() {
   return (
     <div className="App">
+      {/* رأس الصفحة */}
       <header className="header">
         <h1>🌿 Green Nova Tech</h1>
         <p>نحو مستقبل ذكي ومستدام</p>
@@ -12,6 +14,7 @@ function App() {
           <a href="#about" className="btn">من نحن</a>
           <a href="#services" className="btn">خدماتنا</a>
           <a href="#training" className="btn">التكوين</a>
+          <a href="#products" className="btn">منتجاتنا</a>
         </div>
       </header>
 
@@ -26,7 +29,7 @@ function App() {
         </section>
       </div>
 
-      {/* قسم الخدمات */}
+      {/* قسم خدماتنا */}
       <div id="services">
         <section className="services">
           <h2>خدماتنا</h2>
@@ -45,6 +48,11 @@ function App() {
         <Training />
       </div>
 
+      {/* قسم المنتجات */}
+      <div id="products">
+        <Products />
+      </div>
+
       {/* التذييل */}
       <footer className="footer">
         <p>© 2025 Green Nova Tech - جميع الحقوق محفوظة</p>
@@ -54,6 +62,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
