@@ -14,6 +14,15 @@ function App() {
   <a href="#services" className="btn">خدماتنا</a>
   <a href="#training" className="btn">التكوين</a>
 </div>
+<div id="about">
+  <section className="about">
+    <h2>من نحن</h2>
+    <p>
+      نحن مؤسسة جزائرية ناشئة تقدم حلولًا مبتكرة في مجالات الطاقات المتجددة والذكاء الاصطناعي،
+      نسعى إلى تمكين الأفراد والمجتمع من التحوّل الطاقوي الذكي والمستدام.
+    </p>
+  </section>
+</div>
 
 
 
